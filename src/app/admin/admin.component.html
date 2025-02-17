@@ -1,0 +1,13 @@
+<!-- Check if there are no comments -->
+<div *ngIf="comments.length === 0">
+    <p>No comments available to moderate.</p>
+  </div>
+  
+  <div *ngIf="comments.length > 0">
+    <div *ngFor="let comment of comments">
+      <p>{{ comment.content }}</p>
+      <button (click)="approveComment(comment.id)">Approve</button>
+      <button (click)="rejectComment(comment.id)">Reject</button>
+    </div>
+  </div>
+  

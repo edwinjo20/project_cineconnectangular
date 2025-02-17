@@ -1,0 +1,14 @@
+<form (submit)="login()">
+    <div>
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" [(ngModel)]="username" required autocomplete="username" />
+    </div>
+    
+    <div>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" [(ngModel)]="password" required autocomplete="current-password" />
+    </div>
+    
+    <button type="submit">Login</button>
+  </form>
+  
